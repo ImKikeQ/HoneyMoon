@@ -28,8 +28,7 @@ a {
   color: black;               /* Texto claro */
   text-align: center;
 
-  padding: 60px 20px;         /* Más delgado: top-bottom 60px, sides 20px */
-
+  padding: 90px 20px 0 20px;     /* top right bottom left */
   position: sticky;           /* Hace que se pegue arriba al hacer scroll */
   top: 0;
   z-index: 999;
@@ -47,6 +46,44 @@ a {
   font-size: 1rem;
 }
 
+/* === Navegación Hero === */
+.hero-nav {
+  margin-top: 30px;
+  margin-bottom: -10px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  background: rgba(0, 0, 0, 0.3); /* fondo semitransparente */
+  padding: 15px 20px;
+  border-radius: 30px;
+  position: sticky;   /* se pega arriba al hacer scroll */
+  top: 10px;          /* margen arriba */
+  backdrop-filter: blur(8px); /* efecto difuminado PRO */
+  z-index: 999;
+}
+
+.hero-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.hero-nav a:hover {
+  border-bottom: 2px solid #fff;
+  color: #f0f0f0;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .hero-nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+
+
 /* === SECCIÓN BIENVENIDA === */
 .welcome {
   background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
@@ -57,18 +94,32 @@ a {
 }
 
 .welcome img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  width: 250px;          /* Aumenta o reduce el tamaño */
+  height: 250px;         /* Asegura proporción 1:1 */
+  object-fit: cover;     /* Mantiene la imagen centrada y recortada si hace falta */
+  border-radius: 50%;    /* Hace que sea un círculo */
+  border: 5px solid #fff; /* Un borde blanco para destacarla */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4); /* Sombra suave */
+  margin-bottom: 20px;   /* Espacio debajo */
+  /*transition: transform 0.3s ease; /* Animación al pasar el ratón */
+}
+
+.welcome img {
+  transition: transform 0.6s ease-in-out;
+  transform-style: preserve-3d; /* Importante para 3D */
+}
+
+.welcome img:hover {
+   transform: rotateY(180deg); /* Gira sobre el eje Y */
 }
 
 .welcome h2 {
   font-size: 2rem;
-  margin-bottom: 10px;
+  margin-top: 0;          /* Quita espacio arriba */
+  margin-bottom: 5px;     /* Reduce espacio debajo */
+  line-height: 1.2;       /* Compacta la altura de línea */
 }
+
 
 .welcome p {
   max-width: 600px;
@@ -86,17 +137,30 @@ a {
 }
 
 .thanks img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  width: 250px;          /* Aumenta o reduce el tamaño */
+  height: 250px;         /* Asegura proporción 1:1 */
+  object-fit: cover;     /* Mantiene la imagen centrada y recortada si hace falta */
+  border-radius: 50%;    /* Hace que sea un círculo */
+  border: 5px solid #fff; /* Un borde blanco para destacarla */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4); /* Sombra suave */
+  margin-bottom: 20px;   /* Espacio debajo */
+  transition: transform 0.3s ease; /* Animación al pasar el ratón */
+}
+
+.thanks img {
+  transition: transform 0.6s ease-in-out;
+  transform-style: preserve-3d; /* Importante para 3D */
+}
+
+.thanks img:hover {
+   transform: rotateY(180deg); /* Gira sobre el eje Y */
 }
 
 .thanks h2 {
   font-size: 2rem;
-  margin-bottom: 10px;
+  margin-top: 0;          /* Quita espacio arriba */
+  margin-bottom: 5px;     /* Reduce espacio debajo */
+  line-height: 1.2;       /* Compacta la altura de línea */
 }
 
 .thanks p {
@@ -125,6 +189,38 @@ a {
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
+
+/* === SECCION PRE REGALOS === */
+.gift-intro {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fff; /* Asegúrate de que se vea sobre el fondo */
+}
+
+.gift-intro h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.gift-intro ul {
+  list-style: none; /* Quita viñetas */
+  padding: 0;
+  margin: 0;
+}
+
+.gift-intro li {
+  margin: 8px 0;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: default;
+}
+
+.gift-intro li:hover {
+  transform: scale(1.05);
+  color: #ffd700; /* Cambia el color al pasar el mouse */
+}
+
 
 /* === SECCIONES DE REGALOS — GRID PRO === */
 .gifts {
@@ -248,8 +344,38 @@ a {
 
 /* === FOOTER === */
 .footer {
-  background: #333;
+  background: #111;
   color: #fff;
   text-align: center;
   padding: 40px 20px;
+}
+
+.footer p {
+  margin: 10px 0;
+}
+
+.footer .social-icons {
+  margin: 15px 0;
+}
+
+.footer .social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  transform: scale(1.2);
+}
+
+
+@media (max-width: 768px) {
+  .footer {
+    font-size: 0.8rem; /* Más pequeño en móviles */
+    padding: 30px 10px;
+  }
+}
+
+html {
+  scroll-padding-top: 250px; /* Cambia 60px por la altura de tu barra de navegación */
 }

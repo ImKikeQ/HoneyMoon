@@ -9,71 +9,87 @@
 <body>
 
   <!-- HERO -->
-  <header class="hero">
-    <h1>Sonia & Kike</h1>
-    <p>¡Se van de HoneyMoon!</p>
-    <p>Octubre 2025</p>
-  </header>
+<header class="hero">
+  <h1>Sonia & Kike</h1>
+  <p>¡Se van de HoneyMoon!</p>
+  <p>Octubre 2025</p>
+
+  <!-- Navegación sticky Hero -->
+  <nav class="hero-nav">
+    <a href="#welcome">Bienvenida</a>
+    <a href="#thanks">Agradecimientos</a                                      >
+    <a href="#gifts">Regalos Boda</a>
+  </nav>
+</header>
 
   <!-- BIENVENIDA -->
-  <section class="welcome">
-    <img src="images/pareja.jpg" alt="Sonia y Kike">
-    <h2>WELCOME FAMILY AND FRIENDS</h2>
-    <p>Gracias por ser parte de este viaje tan especial. Su cariño y apoyo significan el mundo para nosotros.</p>
+  <section id="welcome" class="welcome">
+    <img src="images/pareja.jpg" alt="Sonia y Kike" class="welcome-img">
+    <h2>FAMILIARES</h2>
+    <h2>AMIGOS</h2>
+    <h2>PERSONAS QUERIDAS</h2>
     <p>Esta web ha sido creada para que seáis partícipes, que cada uno de vosotros aporte su granito de arena y así podamos disfrutar de este gran viaje que con tanto cariño hemos preparado.</p>
     <p>Hemos elegido Noruega como destino porque, como la mayoría habréis imaginado, la boda ha sido al estilo Soniecita casi totalmente, y, por tanto, decidimos que la Luna de Miel la elegiría Kikito. Dado que él viene de un lugar caluroso y no ha visto más nieve que Filomena pues...¡DECIDIDO!</p>
-    <br>
+ 
     <p>Esperamos que este modo de regalar os guste, así quien quiera podrá aportar lo que considere para que vivamos esta aventura al máximo.</p>
   </section>
 
   <!-- AGRADECIMIENTOS -->
-  <section class="thanks">
-    <img src="images/panda.jpg" alt="Sonia y Kike">
+  <section id="thanks" class="thanks">
+    <img src="images/panda.jpg" alt="thanks" class="spin-hover">
     <h2>HONEYMOON THANKS</h2>
     <h2>NORUEGA</h2>
     <p>Estamos súper emocionados con este viaje. Y la verdad es que organizar todo esto, la boda, cada detalle, la luna de miel... ha sido algo muy bonito a la par que estresante.</p>
-
-    <p>Pero, sin duda, el apoyo de todos vosotros ha sido fundamental. Cada mensaje, cada llamada, cada abrazo nos ha dado fuerzas para seguir adelante y hacer de este momento algo inolvidable.</p>
-
     <p>Todo esto nos ha ayudado a conocernos aún más y a confirmar que esto es lo que queremos... </p>
-    <br>
-    <p>¡¡GRACIAS POR HACERLO POSIBLE!! OS QUEREMOS</p>
+    <p>¡¡GRACIAS POR HACERLO POSIBLE!! </p>
+    <p>¡¡OS QUEREMOS!!</p>
   </section>
 
   <!-- 🛫 SECCIÓN VUELOS -->
-<section class="gifts gifts-vuelos">
+<section id="gifts" class="gifts gifts-boda">
+  <div class="gift-intro">
+    <h3>Si quieres contribuir con nuestra HoneyMoon puedes hacerlo a través de:</h3>
+    <ul>
+      <li>💟Transferencia a Revolut desde cualquier tarjeta</li>
+      <li>💟Bizum a cualquiera de nuestros números</li>
+    </ul>
+  </div>
+    <!-- Aquí seguirían tus tarjetas de regalo -->
   <h2>Vuelos ✈️</h2>
 
   <div class="gift-card">
     <img src="images/avion_1.jpg" alt="Vuelo Madrid-Oslo">
     <h3>Vuelo Madrid-Oslo</h3>
-    <p>Ayúdanos con los billetes de ida.</p>
+    <h4>Empieza la HoneyMoon.</h4>
+    <p>200€</p>
     <div class="buttons">
       <a href="https://revolut.me/enriquo3ev" target="_blank">Revolut</a>
       <button onclick="showBizum()">Bizum</button>
-      <button onclick="showPaypal()">PayPal</button>
+   
     </div>
   </div>
 
   <div class="gift-card">
     <img src="images/avion_medio.jpg" alt="Vuelo Bergen-Tromso">
     <h3>Vuelo Bergen-Tromso</h3>
-    <p>Ayúdanos con la vuelta a casa.</p>
+    <h4>En medio de Noruega continuamos.</h4>
+    <p>250€</p>
     <div class="buttons">
       <a href="https://revolut.me/enriquo3ev" target="_blank">Revolut</a>
       <button onclick="showBizum()">Bizum</button>
-      <button onclick="showPaypal()">PayPal</button>
+    
     </div>
   </div>
 
   <div class="gift-card">
     <img src="images/avion_vuelta.jpg" alt="Vuelo Tromso-Madrid">
     <h3>Vuelo Tromso-Madrid</h3>
-    <p>El regreso final de la aventura.</p>
+    <h4>El regreso final de nuestra aventura.</h4>
+    <p>600€</p>
     <div class="buttons">
       <a href="https://revolut.me/enriquo3ev" target="_blank">Revolut</a>
       <button onclick="showBizum()">Bizum</button>
-      <button onclick="showPaypal()">PayPal</button>
+      
     </div>
   </div>
 </section>
@@ -86,22 +102,24 @@
   <div class="gift-card">
     <img src="images/tren1.jpg" alt="Tren Oslo-Bergen">
     <h3>Tren Oslo-Bergen</h3>
-    <p>Recorre Noruega en tren panorámico.</p>
+    <h4>Recorre Noruega en tren panorámico.</h4>
+    <p>400€</p>
     <div class="buttons">
       <a href="https://revolut.me/enriquo3ev" target="_blank">Revolut</a>
       <button onclick="showBizum()">Bizum</button>
-      <button onclick="showPaypal()">PayPal</button>
+
     </div>
   </div>
 
   <div class="gift-card">
     <img src="images/tren2.jpg" alt="Tren Bergen-Flam">
     <h3>Tren Bergen-Flåm</h3>
-    <p>Viaje escénico inolvidable por fiordos.</p>
+    <h4>Viaje escénico inolvidable por fiordos.</h4>
+    <p>400€</p>
     <div class="buttons">
       <a href="https://revolut.me/enriquo3ev" target="_blank">Revolut</a>
       <button onclick="showBizum()">Bizum</button>
-      <button onclick="showPaypal()">PayPal</button>
+    
     </div>
   </div>
 </section>
@@ -109,7 +127,7 @@
 <!-- ============================== -->
 <!-- 🏡 SECCIÓN ALOJAMIENTO -->
 <section class="gifts gifts-alojamiento">
-  <h2>Alojamientos 🏡 - En esta aventura tenemos 4 hoteles</h2>
+  <h2>Alojamientos 🏡 En esta aventura tenemos 4 hoteles</h2>
 
   <div class="gift-card">
     <img src="images/alojamiento1.jpg" alt="Hotel en Oslo">
@@ -119,7 +137,7 @@
     <div class="buttons">
       <a href="https://revolut.me/enriquo3ev" target="_blank">Revolut</a>
       <button onclick="showBizum()">Bizum</button>
-      <button onclick="showPaypal()">PayPal</button>
+      
     </div>
   </div>
 
@@ -131,7 +149,7 @@
     <div class="buttons">
       <a href="https://revolut.me/enriquo3ev" target="_blank">Revolut</a>
       <button onclick="showBizum()">Bizum</button>
-      <button onclick="showPaypal()">PayPal</button>
+     
     </div>
   </div>
 
@@ -139,11 +157,12 @@
   <div class="gift-card">
     <img src="images/hotel3.jpg" alt="Hotel en Bergen">
     <h3>Hotel en Bergen</h3>
+    <p>A empaparnos de cultura.</p>
     <p>250€</p>
     <div class="buttons">
       <a href="https://revolut.me/enriquo3ev" target="_blank">Revolut</a>
       <button onclick="showBizum()">Bizum</button>
-      <button onclick="showPaypal()">PayPal</button>
+
     </div>
   </div>
 
@@ -156,7 +175,7 @@
     <div class="buttons">
       <a href="https://revolut.me/enriquo3ev" target="_blank">Revolut</a>
       <button onclick="showBizum()">Bizum</button>
-      <button onclick="showPaypal()">PayPal</button>
+
     </div>
   </div>
 </section>
@@ -168,42 +187,99 @@
   <div class="gift-card">
     <img src="images/actividades.jpg" alt="Auroras Boreales">
     <h3>Actividades Guachys </h3>
-    <h3> En busqueda de auroras boreales y más 🌃</h3>
+    <h3> En búsqueda de auroras boreales y más 🌃</h3>
     <p> Flåm: Crucero por el Nærøyfjord y Mirador Stegastein 600€ </p>
     <p> Bergen: Funicular Fløibanen 30€ </p>
-    <p> Tromsø: - Auroras boreales en minibús 300€ </p>
+    <p> Tromsø: </p>
+    <p> Auroras boreales en minibús 300€ </p>
     <p> Avistamiento de ballenas 300€ </p>
     <p> Aurora Dinner Cruise 360€</p>
     <div class="buttons">
       <a href="https://revolut.me/enriquo3ev" target="_blank">Revolut</a>
       <button onclick="showBizum()">Bizum</button>
-      <button onclick="showPaypal()">PayPal</button>
+
     </div>
   </div>
 </section>
 
+<!-- 🏞️ SECCIÓN MISCELANEOS -->
+<section class="gifts gifts-misc">
+  <h2>Durante el viajecito 🏞️</h2>
+
+  <div class="gift-card">
+    <img src="images/cultureando.jpg" alt="MISCELANEOS">
+    <h3>Cultureando ando 🗺️</h3>
+    <p> Haremos varios Free Tours </p>
+    <p> Intentaremos empaparnos de la cultura Vikinga </p>
+    <p> Callejearemos en los ratos libres</p>
+    <p> Pero no mucho que a Kikito le duelen los pies</p>
+    <p> 300€</p>
+    <div class="buttons">
+      <a href="https://revolut.me/enriquo3ev" target="_blank">Revolut</a>
+      <button onclick="showBizum()">Bizum</button>
+      
+    </div>
+  </div>
+
+    <div class="gift-card">
+    <img src="images/cena.jpg" alt="MISCELANEOS">
+    <h3>El zampa zampa 🍖🥙</h3>
+    <p>No nos vamos a poner exquisitos.</p>
+    <p>No hemos mirado ningún restaurante especial, pero lo que está claro es que comer es lo que mejor se nos da 😁</p>
+    <p> 700€</p>
+    <div class="buttons">
+      <a href="https://revolut.me/enriquo3ev" target="_blank">Revolut</a>
+      <button onclick="showBizum()">Bizum</button>
+
+    </div>
+  </div>
+
+      <div class="gift-card">
+    <img src="images/regalos.jpg" alt="MISCELANEOS">
+    <h3>Recuerdos y regalitos 🎁</h3>
+    <p>No a todos, pero a alguno habrá que traerle algún recuerdo del lugar.</p>
+    <p>Nosotros también querremos algo para la posteridad</p>
+    <p>(Sí, es posible que estéis contribuyendo a comprar vuestro propio regalo jaja)</p>
+    <p>500€</p>
+    <div class="buttons">
+      <a href="https://revolut.me/enriquo3ev" target="_blank">Revolut</a>
+      <button onclick="showBizum()">Bizum</button>
+    </div>
+  </div>
+</section>
 
   <!-- MODALES -->
   <div id="bizum-modal" class="modal">
     <div class="modal-content">
       <span onclick="closeModal('bizum-modal')" class="close">&times;</span>
       <p>Número Bizum:</p>
-      <p><strong>+34 611 26 79 77</strong></p>
-    </div>
-  </div>
-
-  <div id="paypal-modal" class="modal">
-    <div class="modal-content">
-      <span onclick="closeModal('paypal-modal')" class="close">&times;</span>
-      <img src="images/qr-paypal.jpg" alt="QR PayPal" style="max-width: 200px;">
+      <p><strong>Enrique: +34 611 267 977</strong></p>
+      <p><strong>Sonia: +34 659 486 420</strong></p>
     </div>
   </div>
 
   <!-- FOOTER -->
-  <footer class="footer">
-    <p>Gracias por ser parte de nuestro viaje ✨</p>
-    <p>Sonia & Kike - 2025</p>
-  </footer>
+<footer class="footer">
+  <p>✨✨Gracias por ser parte de nuestro viaje✨✨</p>
+  <div class="social-icons">
+    <!-- GitHub -->
+    <a href="https://github.com/ImKikeQ" target="_blank" aria-label="GitHub">
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="#fff">
+        <path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.1-1.2-1.4-1.2-1.4-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 .1.7 1.8 1.8 2 .9.2 1.8-.1 2.5-.4v-2.2c-2.5.6-3.3-1.3-3.3-1.3-.7-1.8-.1-2.9-.1-2.9 1-1.2 2.5-1.1 3.8-1 .3-.7.6-1.3.9-1.6-2.7-.3-5.6-1.3-5.6-6 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2A11.2 11.2 0 0112 4.7c1 0 2.1.1 3.1.4 2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.7.8 1.2 1.8 1.2 3.1 0 4.8-2.9 5.6-5.7 5.9.6.5 1 1.3 1 2.5v3.7c0 .3.2.6.8.5A11.5 11.5 0 0023.5 12C23.5 5.7 18.3.5 12 .5z"/>
+      </svg>
+    </a>
+    <!-- Instagram -->
+    <a href="https://instagram.com/ImKikeQ" target="_blank" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="#fff">
+        <path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.9.2 2.3.4.6.2 1 .5 1.5.9s.7.9.9 1.5c.2.4.3 1.1.4 2.3.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.9-.4 2.3-.2.6-.5 1-.9 1.5s-.9.7-1.5.9c-.4.2-1.1.3-2.3.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.9-.2-2.3-.4-.6-.2-1-.5-1.5-.9s-.7-.9-.9-1.5c-.2-.4-.3-1.1-.4-2.3-.1-1.2-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.2-1.9.4-2.3.2-.6.5-1 .9-1.5s.9-.7 1.5-.9c.4-.2 1.1-.3 2.3-.4C8.4 2.2 8.8 2.2 12 2.2m0-2.2C8.7 0 8.3 0 7.1.1 5.9.2 5 .3 4.3.6 3.5.8 2.8 1.2 2.2 1.8 1.6 2.4 1.2 3.1 1 3.9c-.3.7-.4 1.6-.5 2.8C.3 8 0 8.4 0 12c0 3.6.3 4 .5 5.2.1 1.2.2 2 .5 2.8.3.8.7 1.5 1.2 2.1.6.6 1.3 1 2.1 1.3.7.3 1.6.4 2.8.5 1.2.1 1.6.1 5.2.1s4-.1 5.2-.1c1.2-.1 2-.2 2.8-.5.8-.3 1.5-.7 2.1-1.3.6-.6 1-1.3 1.3-2.1.3-.7.4-1.6.5-2.8.1-1.2.1-1.6.1-5.2s0-4-.1-5.2c-.1-1.2-.2-2-.5-2.8-.3-.8-.7-1.5-1.3-2.1C21.5 1.2 20.8.8 20 .5c-.7-.3-1.6-.4-2.8-.5C16 0 15.6 0 12 0z"/>
+        <path d="M12 5.8a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zm0 10.2a4 4 0 110-8 4 4 0 010 8zm6.4-10.9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
+      </svg>
+    </a>
+  </div>
+  <p>🐼Sonia & Kike - 2025 🐼</p>
+</footer>
+
+
 
   <!-- ENLACE AL JS -->
   <script src="js/script.js"></script>
