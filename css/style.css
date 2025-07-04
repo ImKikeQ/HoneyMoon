@@ -25,7 +25,7 @@ a {
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
               url('../images/portada.jpg') center/cover no-repeat;
 
-  color: black;               /* Texto claro */
+  color: whitesmoke;               /* Texto claro */
   text-align: center;
 
   padding: 90px 20px 0 20px;     /* top right bottom left */
@@ -237,6 +237,7 @@ a {
   width: 100%;
   text-align: center;
   margin-bottom: 20px;
+  color: #f8f9fa; /* Asegúrate de que se vea sobre el fondo */
 }
 
 .gift-card {
