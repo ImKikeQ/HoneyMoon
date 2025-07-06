@@ -74,13 +74,21 @@ a {
   color: #f0f0f0;
 }
 
-/* === Responsive === */
+/* === Responsive Hero Nav SOLO MÓVIL === */
 @media (max-width: 768px) {
   .hero-nav {
-    flex-direction: column;
-    gap: 15px;
+    flex-direction: row;   /* Mantiene los enlaces en fila */
+    gap: 20px;             /* Menor separación */
+    padding: 8px 12px;     /* Menor padding interior */
+    margin-top: 10px;      /* Opcional: menos margen arriba */
+    border-radius: 20px;   /* Bordes más suaves en móvil */
+  }
+
+  .hero-nav a {
+    font-size: 14px;       /* Opcional: reduce fuente */
   }
 }
+
 
 
 
