@@ -76,18 +76,27 @@ a {
 
 /* === Responsive Hero Nav SOLO MÓVIL === */
 @media (max-width: 768px) {
-  .hero-nav {
-    flex-direction: row;   /* Mantiene los enlaces en fila */
-    gap: 20px;             /* Menor separación */
-    padding: 5px 8px;     /* Menor padding interior */
-    margin-top: 5px;      /* Opcional: menos margen arriba */
-    border-radius: 20px;   /* Bordes más suaves en móvil */
+  .hero {
+    padding: 60px 20px 40px 20px; /* Reduce altura hero */
   }
 
-  .hero-nav a {
-    font-size: 14px;       /* Opcional: reduce fuente */
+  .hero h1 {
+    font-size: 1.8rem; /* Un pelín más pequeño */
+    margin-bottom: 5px; /* Opcional: compacta espacio */
+  }
+
+  .hero p {
+    font-size: 0.9rem; /* Subtítulo más pequeño */
+    margin: 0;         /* Quita márgenes innecesarios */
+    line-height: 1.2;  /* Compacta líneas */
+  }
+
+  .hero-nav {
+    margin-top: 10px;   /* Mucho menos margen arriba */
+    margin-bottom: 0;   /* Si quieres eliminar hueco abajo */
   }
 }
+
 
 
 
