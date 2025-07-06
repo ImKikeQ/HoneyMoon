@@ -75,25 +75,19 @@ a {
 }
 
 /* === Responsive Hero Nav SOLO MÓVIL === */
-@media (max-width: 768px) {
+@@media (max-width: 768px) {
   .hero {
-    padding: 60px 20px 40px 20px; /* Reduce altura hero */
-  }
-
-  .hero h1 {
-    font-size: 1.8rem; /* Un pelín más pequeño */
-    margin-bottom: 5px; /* Opcional: compacta espacio */
-  }
-
-  .hero p {
-    font-size: 0.9rem; /* Subtítulo más pequeño */
-    margin: 0;         /* Quita márgenes innecesarios */
-    line-height: 1.2;  /* Compacta líneas */
+    padding: 60px 20px 40px 20px;
   }
 
   .hero-nav {
-    margin-top: 10px;   /* Mucho menos margen arriba */
-    margin-bottom: 0;   /* Si quieres eliminar hueco abajo */
+    position: relative; /* ¡Quita sticky en móvil! */
+    top: auto;          /* Elimina desplazamiento extra */
+    margin-top: 5px;    /* Ajusta espacio arriba */
+  }
+
+  html {
+    scroll-padding-top: 80px; /* O ajusta a tu nueva altura real */
   }
 }
 
@@ -394,6 +388,6 @@ a {
   }
 }
 
-html {
-  scroll-padding-top: 250px; /* Cambia 60px por la altura de tu barra de navegación */
-}
+/*html {
+  scroll-padding-top: 250px; /* Cambia 60px por la altura de tu barra de navegación 
+}*/
