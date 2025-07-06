@@ -75,25 +75,24 @@ a {
 }
 
 /* === Responsive Hero Nav SOLO MÓVIL === */
-@@media (max-width: 768px) {
-  .hero {
-    padding: 60px 20px 40px 20px;
-  }
-
+@media (max-width: 768px) {
   .hero-nav {
-    position: relative; /* ¡Quita sticky en móvil! */
-    top: auto;          /* Elimina desplazamiento extra */
-    margin-top: 5px;    /* Ajusta espacio arriba */
+    flex-direction: row;   /* Mantiene los enlaces en fila */
+    gap: 20px;             /* Menor separación */
+    padding: 8px 12px;     /* Menor padding interior */
+    margin-top: 10px;      /* Opcional: menos margen arriba */
+    border-radius: 20px;   /* Bordes más suaves en móvil */
   }
 
-  html {
-    scroll-padding-top: 80px; /* O ajusta a tu nueva altura real */
+  .hero-nav a {
+    font-size: 14px;       /* Opcional: reduce fuente */
   }
 }
-
-
-
-
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 20px 20px 20px; /* Ajusta top/bottom como quieras */
+  }
+}
 
 /* === SECCIÓN BIENVENIDA === */
 .welcome {
@@ -388,6 +387,6 @@ a {
   }
 }
 
-/*html {
-  scroll-padding-top: 250px; /* Cambia 60px por la altura de tu barra de navegación 
-}*/
+html {
+  scroll-padding-top: 250px; /* Cambia 60px por la altura de tu barra de navegación */
+}
