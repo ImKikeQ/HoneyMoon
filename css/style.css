@@ -79,8 +79,8 @@ a {
   .hero-nav {
     flex-direction: row;   /* Mantiene los enlaces en fila */
     gap: 20px;             /* Menor separación */
-    padding: 8px 12px;     /* Menor padding interior */
-    margin-top: 10px;      /* Opcional: menos margen arriba */
+    padding: 5px 8px;     /* Menor padding interior */
+    margin-top: 5px;      /* Opcional: menos margen arriba */
     border-radius: 20px;   /* Bordes más suaves en móvil */
   }
 
