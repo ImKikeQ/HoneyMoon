@@ -255,7 +255,21 @@ a {
   transition: transform 0.3s ease;
 }
 
+#precios {
+  color: #fff !important;  /* Máxima prioridad */
+  background: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
 
+
+@media (max-width: 768px) {
+  #precios {
+    font-size: 1rem;
+    margin-top: 15px;
+  }
+}
 
 .gift-card:hover {
   transform: translateY(-5px);
