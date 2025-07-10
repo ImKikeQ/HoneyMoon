@@ -22,10 +22,11 @@ a {
 /* === HERO PEGADO Y ESTILIZADO === */
 .hero {
   /* Fondo con gradiente y foto */
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-              url('../images/portada.jpg') center/cover no-repeat;
+  background: 
+  linear-gradient(to bottom, rgba(0,0,0,0) 80%, white 100%),
+  url('../images/portada.jpg') center/cover no-repeat;
 
-  color: whitesmoke;               /* Texto claro */
+  color: black;               /* Texto claro */
   text-align: center;
 
   padding: 90px 20px 0 20px;     /* top right bottom left */
@@ -63,7 +64,8 @@ a {
 }
 
 .hero-nav a {
-  color: #fff;
+  color: #111; /* Color oscuro para contraste */
+  font-size: 1.2rem; /* Tamaño de fuente más grande */
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s, border-bottom 0.3s;
@@ -91,11 +93,14 @@ a {
 
 /* === SECCIÓN BIENVENIDA === */
 .welcome {
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-              url('../images/galeria1.jpg') center/cover no-repeat;
-  color: white;
+  background: 
+    linear-gradient(to top, rgba(0,0,0,0) 70%, white 100%),
+    linear-gradient(to bottom, rgba(0,0,0,0) 70%, white 100%),
+    url('../images/galeria1.jpg') center/cover no-repeat;
+  color: #333;
   text-align: center;
   padding: 100px 20px;
+  position: relative;
 }
 
 .welcome img {
@@ -107,38 +112,51 @@ a {
   box-shadow: 0 8px 20px rgba(0,0,0,0.4); /* Sombra suave */
   margin-bottom: 20px;   /* Espacio debajo */
   /*transition: transform 0.3s ease; /* Animación al pasar el ratón */
-}
-
-.welcome img {
   transition: transform 0.6s ease-in-out;
   transform-style: preserve-3d; /* Importante para 3D */
+  display: block;
+  margin: 0 auto; /* Centra horizontalmente */
 }
 
 .welcome img:hover {
    transform: rotateY(180deg); /* Gira sobre el eje Y */
 }
 
-.welcome h2 {
-  font-size: 2rem;
-  margin-top: 0;          /* Quita espacio arriba */
-  margin-bottom: 5px;     /* Reduce espacio debajo */
-  line-height: 1.2;       /* Compacta la altura de línea */
+ .h2-group {
+  display: inline-flex;
+  flex-direction: column;
+  color: #fff;
+  background: rgba(0,0,0,0.4);
+  padding: 20px;
+  border-radius: 20px;
 }
 
+.h2-group h2 {
+  background: none; /* Quita fondo individual */
+  margin: 5px 0;
+}
 
 .welcome p {
   max-width: 600px;
   margin: 30px auto;
   line-height: 1.6;
+  color: #fff;
+  background: rgba(0,0,0,0.4);
+  border-radius: 20px; /* Bordes redondeados */
 }
+
+
 
 /* === SECCIÓN AGRADECIMIENTO === */
 .thanks {
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-              url('../images/agradece.jpg') center/cover no-repeat;
-  color: white;
+  background: 
+    linear-gradient(to top, rgba(0,0,0,0) 70%, white 100%),
+    linear-gradient(to bottom, rgba(0,0,0,0) 70%, white 100%),
+    url('../images/agradece.jpg') center/cover no-repeat;
+  color: #333;
   text-align: center;
   padding: 100px 20px;
+  position: relative;
 }
 
 .thanks img {
@@ -150,9 +168,8 @@ a {
   box-shadow: 0 8px 20px rgba(0,0,0,0.4); /* Sombra suave */
   margin-bottom: 20px;   /* Espacio debajo */
   transition: transform 0.3s ease; /* Animación al pasar el ratón */
-}
-
-.thanks img {
+  display: block;
+  margin: 0 auto; /* Centra horizontalmente */
   transition: transform 0.6s ease-in-out;
   transform-style: preserve-3d; /* Importante para 3D */
 }
@@ -161,17 +178,39 @@ a {
    transform: rotateY(180deg); /* Gira sobre el eje Y */
 }
 
+/* Contenedor agrupador */
+.thanks-h2 {
+  display: inline-flex;         /* Agrupa los h2 uno debajo de otro */
+  flex-direction: column;       /* Uno debajo de otro */
+  background: rgba(0, 0, 0, 0.4); /* Fondo común */
+  padding: 20px;                /* Espaciado interno */
+  border-radius: 20px;          /* 🔗 Bordes redondeados */
+}
+
+/* Estilos comunes para los títulos dentro del grupo */
+.thanks-h2 h2 {
+  margin: 5px 0;   /* Espacio entre ellos */
+  background: none; /* Elimina fondo individual */
+  color: #fff;
+}
+
+/* Opcional: para otros h2 fuera del grupo */
 .thanks h2 {
   font-size: 2rem;
-  margin-top: 0;          /* Quita espacio arriba */
-  margin-bottom: 5px;     /* Reduce espacio debajo */
-  line-height: 1.2;       /* Compacta la altura de línea */
+  margin-top: 0;
+  margin-bottom: 5px;
+  line-height: 1.2;
+  color: #fff;
 }
 
 .thanks p {
   max-width: 600px;
   margin: 30px auto;
   line-height: 1.6;
+  background: rgba(0,0,0,0.4); /* Fondo común */
+  color : #fff; /* Asegúrate de que se vea sobre el fondo */
+  padding: 20px;
+  border-radius: 12px; /* Bordes redondeados */
 }
 
 /* === GALERÍA === */
@@ -201,6 +240,8 @@ a {
   text-align: center;
   margin-bottom: 30px;
   color: #fff; /* Asegúrate de que se vea sobre el fondo */
+  background: rgba(0,0,0,0.4); /* Fondo común */
+  border-radius: 12px; /* Bordes redondeados */
 }
 
 .gift-intro h3 {
@@ -229,20 +270,22 @@ a {
 
 /* === SECCIONES DE REGALOS — GRID PRO === */
 .gifts {
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-              url('../images/fondo_regalos.jpg') center/cover no-repeat;
+  background: 
+    linear-gradient(to top, rgba(0,0,0,0) 70%, white 100%),
+    url('../images/fondo_regalos.jpg') center/cover no-repeat;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
   padding: 40px 20px;
+  position: relative;
 }
 
 .gifts h2 {
   width: 100%;
   text-align: center;
   margin-bottom: 20px;
-  color: #f8f9fa; /* Asegúrate de que se vea sobre el fondo */
+  color: #111; /* Asegúrate de que se vea sobre el fondo */
 }
 
 .gift-card {
